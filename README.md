@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/%20Live%20Demo-Open-success?style=for-the-badge" />
   </a>
 
-  <a href="https://github.com/your-username/smart-resume-builder">
+  <a href="https://github.com/Payal12-max/Smart-CV">
     <img src="https://img.shields.io/badge/%20Star%20Repository-yellow?style=for-the-badge" />
   </a>
 </p>
