@@ -19,7 +19,7 @@ import { Navigate, useNavigate } from 'react-router-dom'
 
 function AddResume() {
 
-    const [openDialog,setOpenDialog]=useState(false)
+    const [openDialog,setOpenDialog]=useState(false);
     const [resumeTitle,setResumeTitle]=useState();
     const {user}=useUser();
     const [loading,setLoading]=useState(false);

@@ -13,17 +13,16 @@ function Education() {
   const [loading, setLoading] = useState(false)
   const { resumeInfo, setResumeInfo } = useContext(ResumeInfoContext)
  const params = useParams();
-  // ✅ SAFE INITIAL STATE
   const [educationalList, setEducationalList] = useState([])
 
-  // ✅ LOAD DATA SAFELY
+  //  LOAD DATA SAFELY
   useEffect(() => {
     if (resumeInfo?.education) {
       setEducationalList(resumeInfo.education)
     }
   }, [resumeInfo])
 
-  // ✅ HANDLE INPUT CHANGE
+  // HANDLE INPUT CHANGE
   const handleChange = (event, index) => {
     const newEntries = [...educationalList]
     const { name, value } = event.target
@@ -31,7 +30,7 @@ function Education() {
     setEducationalList(newEntries)
   }
 
-  // ✅ ADD NEW
+  // ADD NEW
   const AddNewEducation = () => {
     setEducationalList([
       ...educationalList,
@@ -46,18 +45,15 @@ function Education() {
     ])
   }
 
-  // ✅ REMOVE
+  // REMOVE
   const RemoveEducation = () => {
     setEducationalList((prev) => prev.slice(0, -1))
   }
 
-  // ✅ SAVE TO BACKEND
+  // SAVE TO BACKEND
   const onSave = () => {
     setLoading(true)
-
-    //console.log("RESUME ID 👉", id);
-    
-
+  
     const data = {
         education: educationalList.map(({ id, ...rest }) => rest)
     }
@@ -74,7 +70,6 @@ function Education() {
       })
   }
 
-  // ✅ UPDATE CONTEXT (NO INFINITE LOOP)
   useEffect(() => {
     if (educationalList.length > 0) {
       setResumeInfo(prev => ({
